@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript colorChanger() Hands-On</title>
+
+
+    <style>
+        div {
+            background-color: rgb(0, 0, 0);
+            Width: 300px;
+            border: 100px solid;
+            border-radius: 100px;
+            padding: 0px;
+            margin: 20px;
+            margin-left: 430px;
+            
+        }
+        h1 { 
+            color: rgb(8, 119, 4); 
+            font-family: 'Helvetica Neue', sans-serif; 
+            font-size: 50px; font-weight: bold; 
+            letter-spacing: -1px; 
+            line-height: 1; 
+            text-align: center; 
+            }
+
+        body{
+                background-color: rgba(43, 179, 41, 0.652);
+                text-align: center;
+            
+            }
+
+            button {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 10px;
+            border-radius: 50px;
+            margin-left: 35px;
+            width: 150px;
+            background-color: rgba(0, 255, 4, 0.778);
+            border: 2px solid rgba(5, 114, 2, 0.859);
+            cursor: pointer;
+            box-shadow: 2px 2px 5px #888888;
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: orangered;
+            box-shadow: 4px 4px 8px #888888;
+            font-weight: bold;
+        }
+        p{
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.778);
+        }
+        #gokuImage {
+    position: absolute;
+    top: 400px; 
+    left: 440px; 
+    z-index: 1; 
+}
+#hahaImage {
+    position: absolute;
+    top: 200px; 
+    left: 600px; 
+    z-index: 2; 
+}
+    </style>
+</head>
+<body>
+    <h1>JavaScript colorChanger() Hands-On</h1>
+    <img src="goku.png" alt="Goku holding energy ball" id="gokuImage">
+    <img src="haha.png" alt="Goku holding energy ball" id="hahaImage">
+
+    </body>
+    
+    <button id="colButton">Click Here!</button>
+    </br>
+    </br>
+    <div id="colDiv"></div>
+
+    <script>
+        function colChange() {
+            var colDiv = document.getElementById("colDiv");
+
+            
+            if (colDiv.style.color === "green") {
+                colDiv.style.color = "blue";
+            } else {
+                colDiv.style.color = "green";
+            }
+        }
+
+        document.getElementById("colButton").addEventListener("click", colChange);
+    </script>
+</body>
+</html>
